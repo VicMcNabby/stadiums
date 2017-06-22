@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
   queries.create({
     name: req.body.name,
     team: req.body.team,
-    type: req.body.type,
+    sport: req.body.sport,
     photo: req.body.photo,
     capacity: req.body.capacity,
     state_id: req.body.state_id
