@@ -15,18 +15,6 @@ router.get("/:id", (request, response, next) => {
       response.json(stadium);
     });
 });
-router.post('/:id/stadiums', function(req, res, next) {
-  queries.create({
-    name: req.body.name,
-    team: req.body.team,
-    type: req.body.type,
-    photo: req.body.photo,
-    capacity: req.body.capacity,
-    state_id: req.body.state_id
-  }).then(function(result) {
-    res.json(result);
-  });
-});
 router.delete('/:id', (req, res, next) => {
   queries.delete(req.params.id).then(() => {
     res.json({
